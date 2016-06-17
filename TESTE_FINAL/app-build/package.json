@@ -1,0 +1,31 @@
+{
+  "name": "hotlisting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wallynm/hotlisting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wallynm/hotlisting/issues"
+  },
+  "homepage": "https://github.com/wallynm/hotlisting#readme",
+  "dependencies": {
+    "gulp-livereload": "^3.8.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sources-less": "^1.0.1"
+  }
+}

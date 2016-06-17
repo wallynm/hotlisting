@@ -1,0 +1,25 @@
+{
+  "name": "hotlisting",
+  "homepage": "https://github.com/wallynm/hotlisting",
+  "authors": [
+    "Wallysson <wally.nm@gmail.com>"
+  ],
+  "description": "Devtesting at hotmart",
+  "main": "index.html",
+  "keywords": [
+    "hotmart"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.0.0"
+  }
+}
