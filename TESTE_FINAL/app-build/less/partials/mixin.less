@@ -1,0 +1,27 @@
+.calc(@prop, @val) {
+  @{prop}: calc(~'@{val}');
+  @{prop}: -moz-calc(~'@{val}');
+  @{prop}: -webkit-calc(~'@{val}');
+  @{prop}: -o-calc(~'@{val}');
+}
+
+.box-shadow(@horizontal: 0, @vertical: 2px, @force: 2px, @blur: 3px, @color) {
+  -moz-box-shadow: @horizontal @vertical @force @blur @color;
+  -o-box-shadow: @horizontal @vertical @force @blur @color;
+  -webkit-box-shadow: @horizontal @vertical @force @blur @color;
+  box-shadow: @horizontal @vertical @force @blur @color;
+}
+
+.inset-box-shadow(@horizontal: 0, @vertical: 2px, @force: 2px, @blur: 3px, @color) {
+  -moz-box-shadow: inset @horizontal @vertical @force @blur @color;
+  -o-box-shadow: inset @horizontal @vertical @force @blur @color;
+  -webkit-box-shadow: inset @horizontal @vertical @force @blur @color;
+  box-shadow: inset @horizontal @vertical @force @blur @color;
+}
+
+.rotate (@deg) {
+  -webkit-transform: rotate(@deg);
+  -moz-transform:    rotate(@deg);
+  -ms-transform:     rotate(@deg);
+  -o-transform:      rotate(@deg);
+}

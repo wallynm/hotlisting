@@ -1,0 +1,134 @@
+.pagination{
+  width: 120px;
+  margin: 30px auto 0px;
+  .transition(all, .5s ,ease-in-out);
+}
+
+.message-list{
+	display: block;
+	list-style:none;
+	margin:0;
+	padding:0;
+	border: 1px solid #ddd;
+	margin-top: 20px;
+
+	.empty-placeholder{
+    transition: opacity 600ms ease, height 1.4s ease, padding 1.4s ease;
+    transition-property: all;
+    opacity: 1;
+    height: 50px;
+    padding: 30px;
+    text-align: center;
+    div{
+	    font-size: 22px;
+    	font-weight: 400;
+    }
+	}
+
+	li{
+		border-bottom: 1px solid #ddd;
+		text-decoration:none;
+		padding: 12px;
+
+		&:last-child{
+			border-bottom: 0px;
+		}
+
+		.selection{
+	    width: 18px;
+	    padding: 26px 0px;
+		}
+
+		&:hover, &.selected{
+			.badge{
+				background: @base-color !important;
+			}
+			.message-button{
+				background: @base-color !important;
+			}
+			.img{
+	    	.box-shadow(0, 0, 0, 3px, @gray-dark) !important;
+			  transform: rotate(10deg);
+
+				img{
+					margin: -5px;
+	    		width: 120% !important;					
+				}
+			}
+		}
+
+		.message-item{
+			.clearfix();
+			background: #f4f4f4;
+    	height: 70px;
+    	border-radius: 35px;
+    	margin-left: 25px;
+
+    	.divider{
+    		margin: 20px 10px;
+    	}
+
+			.img{
+		    position: relative;
+		    overflow: hidden;
+
+		    height: 56px;
+		    width: 56px;
+		    margin: 7px;
+		    .box-shadow(0, 0, 0, 0px, @gray-light);
+        .transition(all, .3s ,ease-in-out);
+		    img{
+		    	width: 100%;
+	        .transition(all, .3s ,ease-in-out);
+				}
+			}
+
+			.message-preview{
+		    font-size: 15px;
+		    margin: 15px 0px;
+				color: @gray;
+
+		    .calc(width,"100% - 145px");  
+				.message-user{
+					color: @base-color;
+				}
+				.message-chat{
+					color: @gray-dark;
+				}
+			}
+			.message-button{
+		    .transition(all, .4s ,ease-in-out);
+				position: relative;
+				background: @gray;
+				height: 100%;
+				width: 35px;
+    		border-radius: 5px;
+    		cursor: pointer;
+
+				.icon-arrow-right{
+		      position: relative;
+			    top: 23px;
+			    left: -15px;					
+				}
+
+				.badge{
+			    .transition(all, .4s ,ease-in-out);
+					position: absolute;
+			    top: 21px;
+			    right: 21px;
+			    width: 28px;
+			    height: 28px;
+			    border-radius: 50%;
+			    font-size: 11px;
+					color: @white;;
+			    background: @gray;
+					span{
+				    top: 6px;
+				    left: 4px;
+				    position: relative;
+					}
+				}
+			}			
+		}
+	}
+}

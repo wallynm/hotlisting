@@ -1,54 +1,52 @@
 // 
 var gulp = require('gulp'),
 	  less = require('gulp-sources-less'),
-    livereload = require('gulp-livereload'),
   	cssmin = require('gulp-minify-css'),
   	concat = require('gulp-concat'),
+  	minify = require('gulp-minify'),
+
   	sourcemaps = require('gulp-sourcemaps'),
   	copy = require('gulp-copy');
-
 
 // Base folder to store compiled files
 var buildFolder = '../public';
 
 // Scripts files to import and compile
 var scriptFiles = [
-	'bower_components/jquery/dist/jquery.js', 
-	'bower_components/bootstrap/dist/js/bootstrap.js'];
+	'bower_components/jquery/dist/jquery.js',
+	'js/*.js'];
 
-
+// Compiles less files
 gulp.task('less', function() {
   return gulp.src('less/import.less')
 	  .pipe(sourcemaps.init())
 	  .pipe(less())
 	  .pipe(cssmin())
 	  .pipe(sourcemaps.write('./'))
-	  .pipe(gulp.dest(buildFolder + '/css'))
-	  .pipe(livereload());
+	  .pipe(gulp.dest(buildFolder + '/css'));
 });
 
+// Copy fonts to public folder
 gulp.task('copy-fonts', function(){
 	return gulp.src(['fonts/**/*.*'])
 	  .pipe(copy(buildFolder + '/fonts', {prefix: 1}));
 });
 
+// Copy images to public folder
 gulp.task('copy-images', function(){
 	return gulp.src(['images/**/*.*'])
 	  .pipe(copy(buildFolder + '/images', {prefix: 1}));
 });
 
+// Compile js files into public folder
 gulp.task('scripts', function() {
   return gulp.src(scriptFiles)
 	  .pipe(sourcemaps.init())
 	  .pipe(concat('main.js'))
+    .pipe(minify({ext:{min:'.min.js'}}))
 	  .pipe(sourcemaps.write('./'))
-	  .pipe(gulp.dest(buildFolder + '/js'))
-	  .pipe(livereload());
+	  .pipe(gulp.dest(buildFolder + '/js'));
 });
 
-gulp.task('watch', function() {
-  livereload.listen();
-  gulp.watch('less/*.less', ['less']);
-});
-
+// Gulp task para executar todos comandos juntos
 gulp.task('default', ['less', 'copy-fonts', 'copy-images', 'scripts']);
