@@ -18,7 +18,7 @@ Todos arquivos dentro de app-build são arquivos originais, sem minificação ou
 
 
 ### Build
-É necessário ter NodeJS instalado e o gerenciador de depenências bower instalados globalmente, caso não possua o bower instalado execute o seguitne comando no console:
+É necessário ter o NodeJS instalado e o gerenciador de depenências bower instalado globalmente, caso não possua execute o seguitne comando no console:
 ```
 $ bower install -g
 ```
@@ -29,7 +29,7 @@ $ npm install
 $ bower install
 ```
 
-- Para então compilar os arquivos e executar as tarefas do gulp, dentro da pasta "build-app" e execute o seguinte comando:
+- Para então compilar os arquivos e executar as tarefas do gulp e execute o seguinte comando dentro da pasta "build-app":
 ``` 
 $ gulp
 ```
