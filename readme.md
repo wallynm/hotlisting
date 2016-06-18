@@ -1,7 +1,7 @@
 # Intro
 Todos arquivos do teste estão localizados na pasta TESTE_FINAL, os arquivos dentro mq pasta TESTEFRONTEND foram mantidos apenas para referência.
 
-### DEMO - [http://localhost/hotlisting/TESTE_FINAL/](http://localhost/hotlisting/TESTE_FINAL/)
+### DEMO - [http://wallynm.github.io/projects/hotmart/](http://wallynm.github.io/projects/hotmart/)
 
 ---
 
