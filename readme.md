@@ -1,6 +1,10 @@
 # Intro
 Todos arquivos do teste estão localizados na pasta TESTE_FINAL, os arquivos dentro mq pasta TESTEFRONTEND foram mantidos apenas para referência.
 
+### DEMO - [http://localhost/hotlisting/TESTE_FINAL/](http://localhost/hotlisting/TESTE_FINAL/)
+
+---
+
 ###Plugins e frameworks utilizados
 - jQuery - Para aplicação de algumas animações e controle do DOM
 - Flexboxgrid - Utilizado para controle de colunas 
