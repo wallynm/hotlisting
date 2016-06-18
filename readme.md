@@ -18,7 +18,7 @@ Todos arquivos dentro de app-build são arquivos originais, sem minificação ou
 
 
 ### Build
-É necessário ter NodeJS instalado e o gerenciador de depenências bower instalados globalmente, caso não possua o bower instalado execute o seguitne comando no console:
+É necessário ter o NodeJS instalado e o gerenciador de depenências bower instalado globalmente, caso não possua execute o seguitne comando no console:
 ```
 $ bower install -g
 ```
