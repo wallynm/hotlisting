@@ -5,6 +5,7 @@ Todos arquivos do teste estão localizados na pasta TESTE_FINAL, os arquivos den
 
 ---
 
+
 ###Plugins e frameworks utilizados
 - jQuery - Para aplicação de algumas animações e controle do DOM
 - Flexboxgrid - Utilizado para controle de colunas 
@@ -15,7 +16,20 @@ Todos arquivos dentro de app-build são arquivos originais, sem minificação ou
 
 - Pasta public: Nela todos os arquivos compilados e gerados pelo gulp são armazenados, os arquivos HTML utilizam está pasta para acessar arquivos estáticos
 
-- Compilar arquivos: Para rodar as tarefas do gulp é necessário acessar a pasta de build-app e executar o comando:
+
+### Build
+É necessário ter NodeJS instalado e o gerenciador de depenências bower instalados globalmente, caso não possua o bower instalado execute o seguitne comando no console:
+```
+$ bower install -g
+```
+
+Uma vez baixado o repositório execute o comando a seguir no console/terminal dentro da pasta "build-app"
+```
+$ npm install
+$ bower install
+```
+
+- Para então compilar os arquivos e executar as tarefas do gulp, dentro da pasta "build-app" e execute o seguinte comando:
 ``` 
 $ gulp
 ```
@@ -23,7 +37,7 @@ $ gulp
 Ou caso deseje, também é possível executar qualquer um destes comandos de maneira isolada:
 ``` 
 $ gulp less;
-$ copy-fonts;
+$ gulp copy-fonts;
 $ gulp copy-images;
 $ gulp scripts;
 ```
